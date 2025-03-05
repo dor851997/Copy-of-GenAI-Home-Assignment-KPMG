@@ -1,0 +1,1966 @@
+{
+    "pages": [
+        {
+            "page_number": 1,
+            "words": [
+                {
+                    "text": "עמוד",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "1",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מתוך",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "2",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "תאריך",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "מילוי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "הטופס",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "2|",
+                    "confidence": 0.687
+                },
+                {
+                    "text": "501",
+                    "confidence": 0.768
+                },
+                {
+                    "text": "20",
+                    "confidence": 0.682
+                },
+                {
+                    "text": "2",
+                    "confidence": 0.696
+                },
+                {
+                    "text": "3",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "תאריך",
+                    "confidence": 0.978
+                },
+                {
+                    "text": "קבלת",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "הטופס",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "בקופה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "0|202",
+                    "confidence": 0.144
+                },
+                {
+                    "text": "199",
+                    "confidence": 0.689
+                },
+                {
+                    "text": "9",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "יום",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "חודש",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "המוסד",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "לביטוח",
+                    "confidence": 0.981
+                },
+                {
+                    "text": "לאומי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מינהל",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "הגמלאות",
+                    "confidence": 0.966
+                },
+                {
+                    "text": "יום",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "חודש",
+                    "confidence": 0.979
+                },
+                {
+                    "text": "שנה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "שנה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "בקשה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "למתן",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "טיפול",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "רפואי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "לנפגע",
+                    "confidence": 0.969
+                },
+                {
+                    "text": "עבודה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "-",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "עצמאי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "אל",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "קופ״ח/ביה״ח",
+                    "confidence": 0.92
+                },
+                {
+                    "text": "_",
+                    "confidence": 0.0
+                },
+                {
+                    "text": "מאיר",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "כפס",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "נא",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "עיין",
+                    "confidence": 0.966
+                },
+                {
+                    "text": "בדברי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "ההסבר",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "שבעמוד",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "2",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "לפני",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מילוי",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "הטופס",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "יום",
+                    "confidence": 0.981
+                },
+                {
+                    "text": "חודש",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "שנה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "תאריך",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "הפגיעה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "1",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "|",
+                    "confidence": 0.687
+                },
+                {
+                    "text": "6",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "0|",
+                    "confidence": 0.183
+                },
+                {
+                    "text": "4",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "2",
+                    "confidence": 0.327
+                },
+                {
+                    "text": "|0",
+                    "confidence": 0.817
+                },
+                {
+                    "text": "2",
+                    "confidence": 0.69
+                },
+                {
+                    "text": "2",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "1",
+                    "confidence": 0.995
+                },
+                {
+                    "text": "ת.ז.",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "ס״ב",
+                    "confidence": 0.933
+                },
+                {
+                    "text": "8|",
+                    "confidence": 0.763
+                },
+                {
+                    "text": "7|",
+                    "confidence": 0.746
+                },
+                {
+                    "text": "7",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "|",
+                    "confidence": 0.805
+                },
+                {
+                    "text": "5",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "|",
+                    "confidence": 0.723
+                },
+                {
+                    "text": "2",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "|4",
+                    "confidence": 0.589
+                },
+                {
+                    "text": "5",
+                    "confidence": 0.78
+                },
+                {
+                    "text": "6",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "3",
+                    "confidence": 0.728
+                },
+                {
+                    "text": "שם",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "פרטי",
+                    "confidence": 0.968
+                },
+                {
+                    "text": "פרטי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "התובע",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "2",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "שם",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "משפחה",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "1",
+                    "confidence": 0.832
+                },
+                {
+                    "text": "יהודה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "חודש",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "יום",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "0|2",
+                    "confidence": 0.247
+                },
+                {
+                    "text": "0",
+                    "confidence": 0.912
+                },
+                {
+                    "text": "219",
+                    "confidence": 0.723
+                },
+                {
+                    "text": "9",
+                    "confidence": 0.892
+                },
+                {
+                    "text": "5",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "שנה",
+                    "confidence": 0.979
+                },
+                {
+                    "text": "תאריך",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "לידה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "טננהוים",
+                    "confidence": 0.952
+                },
+                {
+                    "text": "נקבה",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "זכר",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "כתובת",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מין",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מיקוד",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "יישוב",
+                    "confidence": 0.979
+                },
+                {
+                    "text": "דירה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "כניסה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מס׳",
+                    "confidence": 0.875
+                },
+                {
+                    "text": "בית",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "312422",
+                    "confidence": 0.962
+                },
+                {
+                    "text": "אבן",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "יהודה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "12",
+                    "confidence": 0.997
+                },
+                {
+                    "text": "1",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "16",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "רחוב",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "/",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "תא",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "דואר",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "הרמבם",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "טלפון",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "נייד",
+                    "confidence": 0.981
+                },
+                {
+                    "text": "טלפון",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "קווי",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "C",
+                    "confidence": 0.954
+                },
+                {
+                    "text": "0502|4|7|494",
+                    "confidence": 0.041
+                },
+                {
+                    "text": "7",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "פרטי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "התאונה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "3",
+                    "confidence": 0.996
+                },
+                {
+                    "text": "אני",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מבקש",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "לקבל",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "עזרה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "רפואית",
+                    "confidence": 0.969
+                },
+                {
+                    "text": "בגין",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "פגיעה",
+                    "confidence": 0.967
+                },
+                {
+                    "text": "בעבודה",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "שארעה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "לי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מלצרות",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "כאשר",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "עבדתי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "ב",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "19:00",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "בשעה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "16.04.2022",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "בתאריך",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "סוג",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "העבודה",
+                    "confidence": 0.962
+                },
+                {
+                    "text": "אחר",
+                    "confidence": 0.978
+                },
+                {
+                    "text": "תאונה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "בדרך",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "ללא",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "רכב",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "ת.",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "דרכים",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "בדרך",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "לעבודה/מהעבודה",
+                    "confidence": 0.934
+                },
+                {
+                    "text": "ת.",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "דרכים",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "בעבודה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "במפעל",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מקום",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "התאונה:",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "כתובת",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מקום",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "התאונה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "הורדים",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "8,",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "תל",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "אביב",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "החלקתי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "בגלל",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "שהרצפה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "הייתה",
+                    "confidence": 0.975
+                },
+                {
+                    "text": "רטובה",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "ולא",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "היה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "שום",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "שלט",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "שמזהיר.",
+                    "confidence": 0.892
+                },
+                {
+                    "text": "נסיבות",
+                    "confidence": 0.981
+                },
+                {
+                    "text": "הפגיעה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "/",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "תאור",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "התאונה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "האיבר",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "שנפגע",
+                    "confidence": 0.974
+                },
+                {
+                    "text": "יד",
+                    "confidence": 0.069
+                },
+                {
+                    "text": "שמאל",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "הצהרה",
+                    "confidence": 0.966
+                },
+                {
+                    "text": "4",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "אני",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "החתום",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מטה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מצהיר",
+                    "confidence": 0.981
+                },
+                {
+                    "text": "כי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "אני",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "רשום",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "במוסד",
+                    "confidence": 0.979
+                },
+                {
+                    "text": "כעובד",
+                    "confidence": 0.959
+                },
+                {
+                    "text": "עצמאי",
+                    "confidence": 0.974
+                },
+                {
+                    "text": "וכי",
+                    "confidence": 0.952
+                },
+                {
+                    "text": "כל",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "הפרטים",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "שמסרתי",
+                    "confidence": 0.966
+                },
+                {
+                    "text": "לעיל",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "הם",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "נכונים",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "ומלאים.",
+                    "confidence": 0.951
+                },
+                {
+                    "text": "ידוע",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "לי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "שמסירת",
+                    "confidence": 0.966
+                },
+                {
+                    "text": "פרטים",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "לא",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "נכונים",
+                    "confidence": 0.933
+                },
+                {
+                    "text": "או",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "העלמת",
+                    "confidence": 0.953
+                },
+                {
+                    "text": "נתונים",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "מהווים",
+                    "confidence": 0.892
+                },
+                {
+                    "text": "עבירה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "על",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "החוק.",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "ידוע",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "לי",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "שאם",
+                    "confidence": 0.966
+                },
+                {
+                    "text": "התביעה",
+                    "confidence": 0.954
+                },
+                {
+                    "text": "לא",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "תוכר",
+                    "confidence": 0.964
+                },
+                {
+                    "text": "ע״י",
+                    "confidence": 0.943
+                },
+                {
+                    "text": "המוסד",
+                    "confidence": 0.974
+                },
+                {
+                    "text": "לביטוח",
+                    "confidence": 0.954
+                },
+                {
+                    "text": "לאומי",
+                    "confidence": 0.953
+                },
+                {
+                    "text": "-",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "קופת",
+                    "confidence": 0.953
+                },
+                {
+                    "text": "החולים",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "רשאית",
+                    "confidence": 0.94
+                },
+                {
+                    "text": "לחייב",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "אותי",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "בהוצאות",
+                    "confidence": 0.944
+                },
+                {
+                    "text": "הטיפול",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "הרפואי.",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "חתימה",
+                    "confidence": 0.79
+                },
+                {
+                    "text": "טננהוים",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "יהודה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "שם",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "המבקש",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "למילוי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "ע״י",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "המוסד",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "הרפואי",
+                    "confidence": 0.981
+                },
+                {
+                    "text": "5",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "לאומית",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "מכבי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מאוחדת",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "כללית",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "הנפגע",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "חבר",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "בקופת",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "חולים",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "הנפגע",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "אינו",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "חבר",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "בקופת",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "חולים",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מהות",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "התאונה",
+                    "confidence": 0.981
+                },
+                {
+                    "text": "(אבחנות",
+                    "confidence": 0.942
+                },
+                {
+                    "text": "רפואיות):",
+                    "confidence": 0.954
+                },
+                {
+                    "text": "טופס",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "זה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מנוסח",
+                    "confidence": 0.981
+                },
+                {
+                    "text": "בלשון",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "זכר",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "אך",
+                    "confidence": 0.977
+                },
+                {
+                    "text": "פונה",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "לנשים",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "וגברים",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "כאחד",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "בל/",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "283",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "(05.2010)",
+                    "confidence": 0.954
+                }
+            ]
+        },
+        {
+            "page_number": 2,
+            "words": [
+                {
+                    "text": "עצמאי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "נכבד",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "עמוד",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "2",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מתוך",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "2",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "עובד",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "עצמאי",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "שנפגע",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "בעבודתו",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "(או",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "בדרכו",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "הישירה",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "לעבודתו",
+                    "confidence": 0.966
+                },
+                {
+                    "text": "וממנה),",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "זכאי",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "לטיפול",
+                    "confidence": 0.978
+                },
+                {
+                    "text": "רפואי",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "על",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "חשבון",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "הביטוח",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "הלאומי.",
+                    "confidence": 0.924
+                },
+                {
+                    "text": "תנאי",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "לקבלת",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "טיפול",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "רפואי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "כאמור",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "הוא,",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "שהינך",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "רשום",
+                    "confidence": 0.951
+                },
+                {
+                    "text": "במוסד",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "כעובד",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "עצמאי.",
+                    "confidence": 0.977
+                },
+                {
+                    "text": "לשם",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "קבלת",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "הטיפול",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "הרפואי",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "עליך",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "לפנות",
+                    "confidence": 0.971
+                },
+                {
+                    "text": "לקופת",
+                    "confidence": 0.975
+                },
+                {
+                    "text": "החולים",
+                    "confidence": 0.974
+                },
+                {
+                    "text": "בה",
+                    "confidence": 0.966
+                },
+                {
+                    "text": "הינך",
+                    "confidence": 0.947
+                },
+                {
+                    "text": "חבר",
+                    "confidence": 0.981
+                },
+                {
+                    "text": "(שירותי",
+                    "confidence": 0.937
+                },
+                {
+                    "text": "בריאות",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "כללית,",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "קופ״ח",
+                    "confidence": 0.954
+                },
+                {
+                    "text": "לאומית,",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "קופ״ח",
+                    "confidence": 0.941
+                },
+                {
+                    "text": "מאוחדת,",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "מכבי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "שירותי",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "בריאות).",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "רק",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "במקרה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "של",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "צורך",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "דחוף",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "ולשם",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "הגשת",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "עזרה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "ראשונה",
+                    "confidence": 0.973
+                },
+                {
+                    "text": "בלבד,",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "מותר",
+                    "confidence": 0.951
+                },
+                {
+                    "text": "לפנות",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "חדר",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מיון",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "או",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "לשירות",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "רפואי",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "קרוב",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "אחר.",
+                    "confidence": 0.949
+                },
+                {
+                    "text": "המשך",
+                    "confidence": 0.951
+                },
+                {
+                    "text": "הטיפול",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "הרפואי",
+                    "confidence": 0.978
+                },
+                {
+                    "text": "יינתן",
+                    "confidence": 0.892
+                },
+                {
+                    "text": "אך",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "ורק",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "ע״י",
+                    "confidence": 0.941
+                },
+                {
+                    "text": "השירות",
+                    "confidence": 0.971
+                },
+                {
+                    "text": "הרפואי",
+                    "confidence": 0.964
+                },
+                {
+                    "text": "המוסמך",
+                    "confidence": 0.965
+                },
+                {
+                    "text": "(קופות",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "החולים)",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "אשר",
+                    "confidence": 0.954
+                },
+                {
+                    "text": "יחזיר",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "לך",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "את",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "הוצאותיך",
+                    "confidence": 0.945
+                },
+                {
+                    "text": "בעד",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "הטיפול",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "הראשוני.",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "אין",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "מחזירים",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "הוצאות",
+                    "confidence": 0.969
+                },
+                {
+                    "text": "בעד",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "כל",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "טיפול",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "נוסף",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "שניתן",
+                    "confidence": 0.966
+                },
+                {
+                    "text": "ע\"י",
+                    "confidence": 0.923
+                },
+                {
+                    "text": "שירות",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "רפואי",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "לא",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מוסמך.",
+                    "confidence": 0.975
+                },
+                {
+                    "text": "לא",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "יוחזרו",
+                    "confidence": 0.963
+                },
+                {
+                    "text": "הוצאות",
+                    "confidence": 0.981
+                },
+                {
+                    "text": "טיפול",
+                    "confidence": 0.928
+                },
+                {
+                    "text": "רפואי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "פרטי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "y",
+                    "confidence": 0.839
+                },
+                {
+                    "text": "לקבלת",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "הטיפול",
+                    "confidence": 0.981
+                },
+                {
+                    "text": "הרפואי",
+                    "confidence": 0.951
+                },
+                {
+                    "text": "בקופת",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "חולים",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "עליך",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "למלא",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "טופס",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "זה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "יש",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "למלא",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "את",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "הטופס",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "על",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "כל",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "פרטיו,",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "ובמיוחד",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "להקפיד",
+                    "confidence": 0.974
+                },
+                {
+                    "text": "על",
+                    "confidence": 0.978
+                },
+                {
+                    "text": "מילוי",
+                    "confidence": 0.966
+                },
+                {
+                    "text": "נכון",
+                    "confidence": 0.962
+                },
+                {
+                    "text": "של",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "פרטיך",
+                    "confidence": 0.934
+                },
+                {
+                    "text": "האישיים,",
+                    "confidence": 0.872
+                },
+                {
+                    "text": "תאריך",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "הפגיעה,",
+                    "confidence": 0.966
+                },
+                {
+                    "text": "שעת",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "הפגיעה",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "ושם",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "קופת",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "החולים",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "בה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "הינך",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "חבר.",
+                    "confidence": 0.981
+                },
+                {
+                    "text": "אין",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "להשתמש",
+                    "confidence": 0.981
+                },
+                {
+                    "text": "בטופס",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "זה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "במקרים",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "של",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מחלה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "רגילה",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "או",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "תאונה",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "שהתרחשה",
+                    "confidence": 0.966
+                },
+                {
+                    "text": "שלא",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "במסגרת",
+                    "confidence": 0.975
+                },
+                {
+                    "text": "העבודה.",
+                    "confidence": 0.933
+                },
+                {
+                    "text": "שימוש",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "בטופס",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "זה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "שלא",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "כדין",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "יחייב",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "אותך",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "בתשלום",
+                    "confidence": 0.966
+                },
+                {
+                    "text": "תמורת",
+                    "confidence": 0.981
+                },
+                {
+                    "text": "הטיפול",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "הרפואי.",
+                    "confidence": 0.965
+                },
+                {
+                    "text": "טופס",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "זה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "אינו",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מהווה",
+                    "confidence": 0.933
+                },
+                {
+                    "text": "אישור",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "הכרה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "בפגיעהכפגיעה",
+                    "confidence": 0.928
+                },
+                {
+                    "text": "בעבודה,",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "וההחלטה",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "על",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "כך",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "היא",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "בידי",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "המוסד",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "לביטוח",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "לאומי.",
+                    "confidence": 0.961
+                },
+                {
+                    "text": "לתשומת",
+                    "confidence": 0.976
+                },
+                {
+                    "text": "לבך!",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מסירת",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "פרטים",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "לא",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "נכונים",
+                    "confidence": 0.979
+                },
+                {
+                    "text": "או",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "העלמת",
+                    "confidence": 0.98
+                },
+                {
+                    "text": "מידע",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "מהווים",
+                    "confidence": 0.92
+                },
+                {
+                    "text": "עבירה",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "על",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "החוק.",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "בל/",
+                    "confidence": 0.979
+                },
+                {
+                    "text": "283",
+                    "confidence": 0.982
+                },
+                {
+                    "text": "(05.2010)",
+                    "confidence": 0.954
+                }
+            ]
+        }
+    ]
+}
