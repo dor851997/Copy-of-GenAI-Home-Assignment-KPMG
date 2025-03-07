@@ -62,22 +62,18 @@ def extract_fields_with_openai(extracted_text):
     return structured_data
 
 
-def analyze_document(file_path):
+def analyze_document(file_bytes):
+    poller = client.begin_analyze_document("prebuilt-document", file_bytes)
+    result = poller.result()
     """
-    Analyzes a document (PDF, JPG, PNG) using Azure Document Intelligence.
-
+    Analyze the uploaded document directly from memory.
+    
     Args:
-        file_path (str): Path to the document file.
-
+        file_bytes (bytes): Content of the uploaded file.
+    
     Returns:
-        dict: Extracted text and data.
+        dict: Structured JSON data.
     """
-    if not os.path.exists(file_path):
-        raise FileNotFoundError(f"File not found: {file_path}")
-
-    with open(file_path, "rb") as document:
-        poller = client.begin_analyze_document("prebuilt-document", document)
-        result = poller.result()
 
     extracted_data = {"pages": []}
 
@@ -93,16 +89,4 @@ def analyze_document(file_path):
     # Extract structured fields using Azure OpenAI
     structured_data = extract_fields_with_openai(extracted_text)
 
-    # Save structured data to JSON file
-    output_folder = "output"
-    os.makedirs(output_folder, exist_ok=True)
-
-    output_path_structured = os.path.join(output_folder, os.path.basename(file_path) + "_structured.json")
-    with open(output_path_structured, "w", encoding="utf-8") as structured_file:
-        json.dump(structured_data, structured_file, ensure_ascii=False, indent=4)
-
-    print(f"Structured data extraction completed! Results saved to: {output_path_structured}")
-
-    # Save to JSON file
-
-    output_path = os.path.join(output_folder, os.path.basename(file_path) + ".json")
+    return structured_data
