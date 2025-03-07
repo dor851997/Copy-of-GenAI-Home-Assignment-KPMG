@@ -135,8 +135,12 @@ def extract_fields_with_openai(extracted_text):
         }
 
     prompt = f"""
+    Extract the following information strictly into this JSON structure.  
+    Respond with ONLY valid JSON matching exactly this schema—no additional text, explanations, or markdown formatting:
+
     {json.dumps(json_structure, ensure_ascii=False, indent=2)}
-    Form Response:
+
+    Text to extract from:
     {extracted_text}
     """
 
@@ -150,20 +154,22 @@ def extract_fields_with_openai(extracted_text):
     content = response.choices[0].message.content.strip()
 
     def extract_json_from_response(text):
-        json_match = re.search(r'```json(.*?)```', text, re.DOTALL)
-        if json_match:
-            return json_match.group(1).strip()
-        else:
-            json_match = re.search(r'({.*})', text, re.DOTALL)
+        try:
+            json_match = re.search(r'```json(.*?)```', text, re.DOTALL)
             if json_match:
-                return json_match.group(1).strip()
+                json_content = json_match.group(1).strip()
+                return json.loads(json_content)
+            else:
+                json_match = re.search(r'({.*})', text, re.DOTALL)
+                if json_match:
+                    return json.loads(json_match.group(1).strip())
+        except json.JSONDecodeError as e:
+            logging.error(f"JSON parsing error: {e}")
         return None
 
-    json_content = extract_json_from_response(content)
+    structured_json = extract_json_from_response(content)
 
-    try:
-        structured_json = json.loads(json_content)
-    except (json.JSONDecodeError, TypeError):
+    if structured_json is None:
         structured_json = {"error": "Invalid JSON", "raw_response": content}
 
     return structured_json
