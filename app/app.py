@@ -1,14 +1,18 @@
 import streamlit as st
 from analyze import analyze_document
 
-st.title("PDF/JPG Document Analyzer")
+st.title("Document Analysis and Extraction")
 
-uploaded_file = st.file_uploader("Upload your PDF/JPG file", type=["pdf", "jpg", "jpeg"])
+uploaded_file = st.file_uploader("Upload your document", type=["pdf", "png", "jpg"])
 
 if uploaded_file:
-    file_bytes = uploaded_file.getvalue()
+    with st.spinner("Analyzing document..."):
+        structured_data = analyze_document(uploaded_file.getvalue())
 
-    # Directly analyze file without saving
-    structured_data = analyze_document(file_bytes=file_bytes)
+    validation = structured_data.pop("validation", {})
+    if validation.get("is_complete"):
+        st.success("All required fields extracted successfully!")
+    else:
+        st.warning(f"Missing or incomplete fields detected: {', '.join(validation.get('missing_fields', []))}")
 
-    st.json(structured_data)
+    st.json(structured_data, expanded=False)

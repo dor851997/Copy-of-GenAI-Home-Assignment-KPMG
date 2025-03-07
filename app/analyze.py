@@ -203,5 +203,40 @@ def analyze_document(file_bytes):
     structured_data = extract_fields_with_openai(extracted_text)
 
     logging.info("Successfully received structured data from OpenAI.")
+
+    validation_result = validate_extracted_data(structured_data)
+
+    if validation_result["is_complete"]:
+        logging.info("Extracted data is complete.")
+    else:
+        logging.warning(f"Extracted data incomplete. Missing fields: {validation_result['missing_fields']}")
+
+    structured_data["validation"] = validation_result
     
     return structured_data
+
+def validate_extracted_data(extracted_json, required_fields=None):
+    if required_fields is None:
+        required_fields = [
+            "שם משפחה", "שם פרטי", "מספר זהות", "מין",
+            "תאריך לידה", "כתובת", "טלפון נייד", "סוג העבודה",
+            "תאריך הפגיעה", "תיאור התאונה", "האיבר שנפגע"
+        ]
+
+    missing_fields = []
+
+    for field in required_fields:
+        if isinstance(extracted_json.get(field, ""), dict):
+            if not all(extracted_json[field].values()):
+                missing_fields.append(field)
+        elif not extracted_json.get(field):
+            missing_fields.append(field)
+
+    is_complete = len(missing_fields) == 0
+
+    validation_result = {
+        "is_complete": is_complete,
+        "missing_fields": missing_fields
+    }
+
+    return validation_result
