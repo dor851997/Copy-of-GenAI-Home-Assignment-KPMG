@@ -11,8 +11,10 @@ if uploaded_file:
 
     validation = structured_data.pop("validation", {})
     if validation.get("is_complete"):
-        st.success("All required fields extracted successfully!")
+        st.success(f"Extraction complete! Accuracy Score: {validation['accuracy_score']*100}%")
     else:
-        st.warning(f"Missing or incomplete fields detected: {', '.join(validation.get('missing_fields', []))}")
-
+        st.warning(
+            f"Missing or incomplete fields: {', '.join(validation.get('missing_fields', []))}. "
+            f"Accuracy Score: {validation['accuracy_score']*100}%"
+        )
     st.json(structured_data, expanded=False)

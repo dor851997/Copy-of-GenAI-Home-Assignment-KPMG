@@ -204,24 +204,23 @@ def analyze_document(file_bytes):
 
     logging.info("Successfully received structured data from OpenAI.")
 
-    validation_result = validate_extracted_data(structured_data)
+    ocr_confidence_data = [word["confidence"] for page in extracted_data["pages"] for word in page["words"]]
+    validation_result = validate_extracted_data(structured_data, ocr_confidence_data)
 
     if validation_result["is_complete"]:
-        logging.info("Extracted data is complete.")
+        logging.info(f"Extracted data is complete with accuracy score: {validation_result['accuracy_score']}")
     else:
-        logging.warning(f"Extracted data incomplete. Missing fields: {validation_result['missing_fields']}")
-
+        logging.warning(
+            f"Extracted data incomplete. Missing fields: {validation_result['missing_fields']}, "
+            f"Accuracy score: {validation_result['accuracy_score']}"
+        )
     structured_data["validation"] = validation_result
     
     return structured_data
 
-def validate_extracted_data(extracted_json, required_fields=None):
+def validate_extracted_data(extracted_json, ocr_confidence_data, required_fields=None):
     if required_fields is None:
-        required_fields = [
-            "שם משפחה", "שם פרטי", "מספר זהות", "מין",
-            "תאריך לידה", "כתובת", "טלפון נייד", "סוג העבודה",
-            "תאריך הפגיעה", "תיאור התאונה", "האיבר שנפגע"
-        ]
+        required_fields = list(extracted_json.keys())
 
     missing_fields = []
 
@@ -234,9 +233,12 @@ def validate_extracted_data(extracted_json, required_fields=None):
 
     is_complete = len(missing_fields) == 0
 
+    avg_confidence = sum(ocr_confidence_data) / len(ocr_confidence_data) if ocr_confidence_data else 0
+
     validation_result = {
         "is_complete": is_complete,
-        "missing_fields": missing_fields
+        "missing_fields": missing_fields,
+        "accuracy_score": round(avg_confidence, 2)
     }
 
     return validation_result
