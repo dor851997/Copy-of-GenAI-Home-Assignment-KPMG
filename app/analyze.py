@@ -29,6 +29,16 @@ openai_client = AzureOpenAI(
 )
 
 def detect_language(text):
+    """
+    Detects the primary language of the provided text using Azure OpenAI.
+
+    Args:
+        text (str): The text whose language is to be detected.
+
+    Returns:
+        str: Detected language ('Hebrew' or 'English'). Defaults to 'English' if detection is ambiguous.
+    """
+
     prompt = f"""
     Detect the primary language of the following text. 
     Respond with only "Hebrew" or "English".
@@ -48,6 +58,16 @@ def detect_language(text):
     return language if language in ["Hebrew", "English"] else "English"
 
 def extract_fields_with_openai(extracted_text):
+    """
+    Uses Azure OpenAI to extract structured information from raw extracted text based on a predefined JSON schema.
+
+    Args:
+        extracted_text (str): The raw text extracted from the document.
+
+    Returns:
+        dict: Structured JSON matching the provided schema or an error message if parsing fails.
+    """
+    
     language = detect_language(extracted_text)
 
     if language == "Hebrew":
@@ -154,6 +174,15 @@ def extract_fields_with_openai(extracted_text):
     content = response.choices[0].message.content.strip()
 
     def extract_json_from_response(text):
+        """
+        Attempts to robustly extract and parse JSON from OpenAI response, handling extraneous text or markdown fences gracefully.
+
+        Args:
+            text (str): The raw response text from OpenAI.
+
+        Returns:
+            dict or None: Parsed JSON dictionary or None if parsing fails.
+        """
         try:
             json_match = re.search(r'```json(.*?)```', text, re.DOTALL)
             if json_match:
