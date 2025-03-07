@@ -28,38 +28,148 @@ openai_client = AzureOpenAI(
     azure_endpoint=ENDPOINT_OPENAI,
     api_version="2024-02-01"
 )
-
+import json
 import re
 
-def extract_fields_with_openai(extracted_text):
+def detect_language(text):
     prompt = f"""
-    Extract structured key-value pairs from the following text and output as JSON.
+    Detect the primary language of the following text. 
+    Respond with only "Hebrew" or "English".
 
-    {extracted_text}
-
-    Only output valid JSON. Do not include explanations or additional text.
+    Text:
+    {text}
     """
 
     response = openai_client.chat.completions.create(
         model="gpt-4o",
         messages=[{"role": "user", "content": prompt}],
-        max_tokens=1000,
+        max_tokens=5,
+        temperature=0
+    )
+
+    language = response.choices[0].message.content.strip()
+    return language if language in ["Hebrew", "English"] else "English"
+
+def extract_fields_with_openai(extracted_text):
+    language = detect_language(extracted_text)
+
+    if language == "Hebrew":
+        json_structure = {
+            "שם משפחה": "",
+            "שם פרטי": "",
+            "מספר זהות": "",
+            "מין": "",
+            "תאריך לידה": {"יום": "", "חודש": "", "שנה": ""},
+            "כתובת": {
+                "רחוב": "",
+                "מספר בית": "",
+                "כניסה": "",
+                "דירה": "",
+                "עיר": "",
+                "מיקוד": "",
+                "תא דואר": ""
+            },
+            "טלפון קווי": "",
+            "טלפון נייד": "",
+            "סוג העבודה": "",
+            "תאריך הפגיעה": {"יום": "", "חודש": "", "שנה": ""},
+            "שעת הפגיעה": "",
+            "מיקום התאונה": "",
+            "תיאור התאונה": "",
+            "האיבר שנפגע": "",
+            "חתימה": "",
+            "תאריך מילוי הטופס": {"יום": "", "חודש": "", "שנה": ""},
+            "תאריך קבלת הטופס בקופה": {"יום": "", "חודש": "", "שנה": ""},
+            "למילוי ע\"י המוסד הרפואי": {
+                "חבר בקופת חולים": "",
+                "מהות התאונה": "",
+                "אבחנות רפואיות": ""
+            }
+        }
+    else:
+        json_structure = {
+            "lastName": "",
+            "firstName": "",
+            "idNumber": "",
+            "gender": "",
+            "dateOfBirth": {
+                "day": "",
+                "month": "",
+                "year": ""
+            },
+            "address": {
+                "street": "",
+                "houseNumber": "",
+                "entrance": "",
+                "apartment": "",
+                "city": "",
+                "postalCode": "",
+                "poBox": ""
+            },
+            "landlinePhone": "",
+            "mobilePhone": "",
+            "jobType": "",
+            "dateOfInjury": {
+                "day": "",
+                "month": "",
+                "year": ""
+            },
+            "timeOfInjury": "",
+            "accidentLocation": "",
+            "accidentAddress": "",
+            "accidentDescription": "",
+            "injuredBodyPart": "",
+            "signature": "",
+            "formFillingDate": {
+                "day": "",
+                "month": "",
+                "year": ""
+            },
+            "formReceiptDateAtClinic": {
+                "day": "",
+                "month": "",
+                "year": ""
+            },
+            "medicalInstitutionFields": {
+                "healthFundMember": "",
+                "natureOfAccident": "",
+                "medicalDiagnoses": ""
+            }
+        }
+
+    prompt = f"""
+    {json.dumps(json_structure, ensure_ascii=False, indent=2)}
+    Form Response:
+    {extracted_text}
+    """
+
+    response = openai_client.chat.completions.create(
+        model="gpt-4o",
+        messages=[{"role": "user", "content": prompt}],
+        max_tokens=1500,
         temperature=0
     )
 
     content = response.choices[0].message.content.strip()
 
-    # Remove Markdown code fences if present
-    content = re.sub(r'^```json\n?|```$', '', content, flags=re.MULTILINE).strip()
+    def extract_json_from_response(text):
+        json_match = re.search(r'```json(.*?)```', text, re.DOTALL)
+        if json_match:
+            return json_match.group(1).strip()
+        else:
+            json_match = re.search(r'({.*})', text, re.DOTALL)
+            if json_match:
+                return json_match.group(1).strip()
+        return None
+
+    json_content = extract_json_from_response(content)
 
     try:
-        structured_data = json.loads(content)
-    except json.JSONDecodeError:
-        print("⚠️ Warning: Received invalid JSON from OpenAI:")
-        print(content)
-        structured_data = {"error": "Invalid JSON", "raw_response": content}
+        structured_json = json.loads(json_content)
+    except (json.JSONDecodeError, TypeError):
+        structured_json = {"error": "Invalid JSON", "raw_response": content}
 
-    return structured_data
+    return structured_json
 
 
 def analyze_document(file_bytes):
