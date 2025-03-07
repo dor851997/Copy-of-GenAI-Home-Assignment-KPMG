@@ -4,6 +4,8 @@ from dotenv import load_dotenv
 from azure.ai.formrecognizer import DocumentAnalysisClient
 from azure.core.credentials import AzureKeyCredential
 from openai import AzureOpenAI
+import logging
+import re
 
 # Load environment variables
 load_dotenv()
@@ -16,9 +18,6 @@ ENDPOINT_OPENAI = os.getenv("AZURE_OPENAI_SERVICES_URL")
 API_KEY_OPENAI = os.getenv("AZURE_OPENAI_SERVICES_KEY")
 
 
-print("Endpoint:", ENDPOINT_OCR)
-print("API Key:", "Present" if API_KEY_OPENAI else "Not Found")  # Mask actual key for security
-
 # Initialize Document Analysis Client
 client = DocumentAnalysisClient(endpoint=ENDPOINT_OCR, credential=AzureKeyCredential(API_KEY_OCR))
 
@@ -28,8 +27,6 @@ openai_client = AzureOpenAI(
     azure_endpoint=ENDPOINT_OPENAI,
     api_version="2024-02-01"
 )
-import json
-import re
 
 def detect_language(text):
     prompt = f"""
@@ -171,8 +168,10 @@ def extract_fields_with_openai(extracted_text):
 
     return structured_json
 
-
 def analyze_document(file_bytes):
+    logging.basicConfig(level=logging.INFO)
+    logging.info("Starting document analysis.")
+    
     poller = client.begin_analyze_document("prebuilt-document", file_bytes)
     result = poller.result()
     """
@@ -193,10 +192,16 @@ def analyze_document(file_bytes):
             page_data["words"].append({"text": word.content, "confidence": word.confidence})
         extracted_data["pages"].append(page_data)
 
+    logging.info(f"Extracted {sum(len(page['words']) for page in extracted_data['pages'])} words from document.")
+    
     # Combine extracted text into a single string
     extracted_text = " ".join(word["text"] for page in extracted_data["pages"] for word in page["words"])
 
+    logging.info("Sending extracted text to OpenAI for field extraction.")
+    
     # Extract structured fields using Azure OpenAI
     structured_data = extract_fields_with_openai(extracted_text)
 
+    logging.info("Successfully received structured data from OpenAI.")
+    
     return structured_data
