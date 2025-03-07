@@ -1,0 +1,42 @@
+{
+    "form_fill_date": "20/02/2023",
+    "form_received_date": "09/02/2023",
+    "institution": "המוסד לביטוח לאומי",
+    "management": "מינהל הגמלאות",
+    "request_type": "בקשה למתן טיפול רפואי לנפגע עבודה - עצמאי",
+    "recipient": "קופ״ח/ביה״ח מאיר כפס",
+    "injury_date": "16/04/2022",
+    "id_number": "5245678",
+    "first_name": "יהודה",
+    "last_name": "טננהוים",
+    "birth_date": "02/09/1995",
+    "gender": "זכר",
+    "address": {
+        "street": "הרמבם",
+        "house_number": "16",
+        "entrance": "1",
+        "apartment": "12",
+        "city": "אבן יהודה",
+        "postal_code": "312422"
+    },
+    "phone_numbers": {
+        "mobile": "0502474947",
+        "landline": ""
+    },
+    "accident_details": {
+        "request_medical_assistance": "אני מבקש לקבל עזרה רפואית בגין פגיעה בעבודה שארעה לי",
+        "work_type": "מלצרות",
+        "accident_date_time": "16/04/2022 19:00",
+        "accident_type": "תאונה בעבודה",
+        "accident_location": "הורדים 8, תל אביב",
+        "accident_description": "החלקתי בגלל שהרצפה הייתה רטובה ולא היה שום שלט שמזהיר",
+        "injured_body_part": "יד שמאל"
+    },
+    "declaration": {
+        "text": "אני החתום מטה מצהיר כי אני רשום במוסד כעובד עצמאי וכי כל הפרטים שמסרתי לעיל הם נכונים ומלאים. ידוע לי שמסירת פרטים לא נכונים או העלמת נתונים מהווים עבירה על החוק. ידוע לי שאם התביעה לא תוכר ע״י המוסד לביטוח לאומי - קופת החולים רשאית לחייב אותי בהוצאות הטיפול הרפואי.",
+        "signature": "טננהוים יהודה"
+    },
+    "health_fund": "כללית",
+    "member_of_health_fund": true,
+    "accident_nature": "מהות התאונה (אבחנות רפואיות)"
+}
