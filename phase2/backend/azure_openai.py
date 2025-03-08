@@ -2,8 +2,7 @@ from openai import AzureOpenAI
 import os
 import logging
 from dotenv import load_dotenv
-from data_loader import load_html_knowledge_base
-
+import numpy as np
 
 load_dotenv()
 
@@ -17,15 +16,31 @@ openai_client = AzureOpenAI(
 )
 
 # Load the knowledge base at startup
-knowledge_base = load_html_knowledge_base()
+from data_loader import load_embeddings_from_pickle
+index, knowledge_base_texts = load_embeddings_from_pickle()
+
+async def select_relevant_content(question: str, top_k=50):
+    question_embedding_response = openai_client.embeddings.create(
+        model="text-embedding-ada-002",
+        input=question
+    )
+
+    question_embedding = np.array(question_embedding_response.data[0].embedding).reshape(1, -1)
+
+    distances, indices = index.search(question_embedding, top_k)
+    relevant_sections = [knowledge_base_texts[i] for i in indices[0]]
+
+    return "\n\n".join(relevant_sections)
 
 async def get_answer_from_openai(question: str, user_info: dict, history: list) -> str:
+    relevant_knowledge = await select_relevant_content(question)
+
     prompt = f"""
     You're an assistant specialized in medical services for Israeli HMOs. 
     Use the following Knowledge Base to answer clearly and accurately:
 
     Knowledge Base:
-    {knowledge_base[:20000]}  # Limit context if needed
+    {relevant_knowledge}
 
     User Information: 
     {user_info}
@@ -39,7 +54,7 @@ async def get_answer_from_openai(question: str, user_info: dict, history: list) 
     Provide a detailed, accurate response based on the knowledge base.
     """
 
-    logger.info(f"Sending prompt to OpenAI: {prompt[:500]}...")  # Log initial part of the prompt for brevity
+    logger.info(f"Sending prompt to OpenAI: {prompt[:500]}...")
 
     response = openai_client.chat.completions.create(
         model="gpt-4o",
@@ -51,4 +66,4 @@ async def get_answer_from_openai(question: str, user_info: dict, history: list) 
     answer = response.choices[0].message.content.strip()
     logger.info(f"Received response from OpenAI: {response.choices[0].message.content[:500]}...")
 
-    return response.choices[0].message.content.strip()
+    return answer

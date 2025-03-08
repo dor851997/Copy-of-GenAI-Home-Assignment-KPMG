@@ -1,20 +1,50 @@
-from bs4 import BeautifulSoup
-import os
+import pickle
+import faiss
+import numpy as np
+import logging
 
-DATA_DIRECTORY = "../phase2_data"  # clearly defined global constant
+logging.basicConfig(level=logging.INFO)
 
-def load_html_knowledge_base():
+def load_embeddings_from_pickle(file_path="knowledge_base_embeddings.pkl"):
     """
-    Loads HTML files from the 'phase2_data' folder located at the project's root into a single knowledge base text.
+    Loads pre-generated embeddings from a pickle file and initializes a FAISS vector index.
+
+    Args:
+        file_path (str): Path to the pickle file with embeddings.
+
+    Returns:
+        index (faiss.IndexFlatL2): FAISS index for efficient vector searches.
+        texts (list): Corresponding text segments for embeddings.
     """
-    knowledge_base_text = ""
-    data_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), DATA_DIRECTORY))
+    logging.info(f"Loading embeddings from {file_path}...")
+    with open(file_path, "rb") as file:
+        embeddings, texts = pickle.load(file)
+    
+    embeddings_array = np.array(embeddings).astype('float32')
+    index = faiss.IndexFlatL2(embeddings_array.shape[1])
+    index.add(embeddings_array)
 
-    for filename in os.listdir(data_directory):
-        if filename.endswith(".html"):
-            file_path = os.path.join(data_directory, filename)
-            with open(file_path, "r", encoding="utf-8") as file:
-                soup = BeautifulSoup(file, "html.parser")
-                knowledge_base_text += soup.get_text(separator="\n", strip=True) + "\n\n"
+    logging.info(f"Loaded {len(texts)} embeddings into FAISS index.")
+    return index, texts
 
-    return knowledge_base_text
+# Load embeddings only once at startup
+index, knowledge_base_texts = load_embeddings_from_pickle("knowledge_base_embeddings.pkl")
+
+def find_relevant_sections(query, embedding_function, top_k=5):
+    """
+    Finds relevant sections from the knowledge base for a given user query.
+
+    Parameters:
+        query (str): User query text.
+        embedding_function (callable): Function that creates embeddings for the query.
+        top_k (int): Number of top relevant sections to return.
+
+    Returns:
+        list[str]: Most relevant knowledge base sections.
+    """
+    logging.info("Generating embedding for user query...")
+    query_embedding = np.array([embedding_function(query)]).astype('float32')
+    distances, indices = index.search(query_embedding, top_k)
+    relevant_texts = [knowledge_base_texts[i] for i in indices[0]]
+    logging.info(f"Found {len(relevant_texts)} relevant sections.")
+    return relevant_texts
