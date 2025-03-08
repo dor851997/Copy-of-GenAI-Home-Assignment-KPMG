@@ -6,6 +6,7 @@ from azure.core.credentials import AzureKeyCredential
 from openai import AzureOpenAI
 import logging
 import re
+import asyncio
 
 # Load environment variables
 load_dotenv()
@@ -57,7 +58,7 @@ def detect_language(text):
     language = response.choices[0].message.content.strip()
     return language if language in ["Hebrew", "English"] else "English"
 
-def extract_fields_with_openai(extracted_text):
+async def extract_fields_with_openai(extracted_text):
     """
     Uses Azure OpenAI to extract structured information from raw extracted text based on a predefined JSON schema.
 
@@ -164,7 +165,7 @@ def extract_fields_with_openai(extracted_text):
     {extracted_text}
     """
 
-    response = openai_client.chat.completions.create(
+    response = await openai_client.chat.completions.create(
         model="gpt-4o",
         messages=[{"role": "user", "content": prompt}],
         max_tokens=1500,
@@ -203,7 +204,7 @@ def extract_fields_with_openai(extracted_text):
 
     return structured_json
 
-def analyze_document(file_bytes):
+async def analyze_document(file_bytes):
     logging.basicConfig(level=logging.INFO)
     logging.info("Starting document analysis.")
     
@@ -235,7 +236,7 @@ def analyze_document(file_bytes):
     logging.info("Sending extracted text to OpenAI for field extraction.")
     
     # Extract structured fields using Azure OpenAI
-    structured_data = extract_fields_with_openai(extracted_text)
+    structured_data = await extract_fields_with_openai(extracted_text)
 
     logging.info("Successfully received structured data from OpenAI.")
 
