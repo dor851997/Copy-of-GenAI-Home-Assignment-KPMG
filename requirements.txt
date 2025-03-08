@@ -9,3 +9,5 @@ redis==5.2.1
 fastapi==0.115.11
 uvicorn==0.34.0
 pydantic==2.10.6
+beautifulsoup4==4.13.3
+lxml==5.3.1
