@@ -3,10 +3,11 @@ import json
 from dotenv import load_dotenv
 from azure.ai.formrecognizer import DocumentAnalysisClient
 from azure.core.credentials import AzureKeyCredential
-from openai import AzureOpenAI
+from openai import AsyncAzureOpenAI
 import logging
 import re
 import asyncio
+from celery import Celery
 
 # Load environment variables
 load_dotenv()
@@ -18,18 +19,22 @@ API_KEY_OCR = os.getenv("AZURE_OCR_AI_SERVICES_KEY")
 ENDPOINT_OPENAI = os.getenv("AZURE_OPENAI_SERVICES_URL")
 API_KEY_OPENAI = os.getenv("AZURE_OPENAI_SERVICES_KEY")
 
+# Celery configuration
+celery_app = Celery('document_analysis', broker='redis://localhost:6379/0',backend='redis://localhost:6379/0'
+)
+celery_app.conf.broker_connection_retry_on_startup = True
 
 # Initialize Document Analysis Client
 client = DocumentAnalysisClient(endpoint=ENDPOINT_OCR, credential=AzureKeyCredential(API_KEY_OCR))
 
 # Initialize Azure OpenAI Client
-openai_client = AzureOpenAI(
+openai_client = AsyncAzureOpenAI(
     api_key=API_KEY_OPENAI,
     azure_endpoint=ENDPOINT_OPENAI,
     api_version="2024-02-01"
 )
 
-def detect_language(text):
+async def detect_language(text):
     """
     Detects the primary language of the provided text using Azure OpenAI.
 
@@ -48,7 +53,7 @@ def detect_language(text):
     {text}
     """
 
-    response = openai_client.chat.completions.create(
+    response = await openai_client.chat.completions.create(
         model="gpt-4o",
         messages=[{"role": "user", "content": prompt}],
         max_tokens=5,
@@ -69,7 +74,7 @@ async def extract_fields_with_openai(extracted_text):
         dict: Structured JSON matching the provided schema or an error message if parsing fails.
     """
     
-    language = detect_language(extracted_text)
+    language = await detect_language(extracted_text)
 
     if language == "Hebrew":
         json_structure = {
@@ -205,20 +210,21 @@ async def extract_fields_with_openai(extracted_text):
     return structured_json
 
 async def analyze_document(file_bytes):
+    """
+    Analyzes an uploaded document by performing OCR and structured data extraction via Azure OpenAI.
+
+    Args:
+        file_bytes (bytes): Byte content of the uploaded document.
+
+    Returns:
+        dict: Extracted structured data along with validation results, including accuracy scores and missing fields.
+    """
+    
     logging.basicConfig(level=logging.INFO)
     logging.info("Starting document analysis.")
     
     poller = client.begin_analyze_document("prebuilt-document", file_bytes)
     result = poller.result()
-    """
-    Analyze the uploaded document directly from memory.
-    
-    Args:
-        file_bytes (bytes): Content of the uploaded file.
-    
-    Returns:
-        dict: Structured JSON data.
-    """
 
     extracted_data = {"pages": []}
 
@@ -255,6 +261,18 @@ async def analyze_document(file_bytes):
     return structured_data
 
 def validate_extracted_data(extracted_json, ocr_confidence_data, required_fields=None):
+    """
+    Validates the completeness and accuracy of extracted JSON data based on OCR confidence levels.
+
+    Args:
+        extracted_json (dict): JSON data extracted from the document.
+        ocr_confidence_data (list): List of OCR confidence scores.
+        required_fields (list, optional): List of fields required for completeness validation. Defaults to all fields in extracted_json.
+
+    Returns:
+        dict: Validation result including completeness status, missing fields, and overall accuracy score.
+    """
+
     if required_fields is None:
         required_fields = list(extracted_json.keys())
 
@@ -278,3 +296,9 @@ def validate_extracted_data(extracted_json, ocr_confidence_data, required_fields
     }
 
     return validation_result
+
+@celery_app.task(name="analyze_document_task")
+def analyze_document_task(file_bytes):
+    loop = asyncio.get_event_loop()
+    result = loop.run_until_complete(analyze_document(file_bytes))
+    return result
