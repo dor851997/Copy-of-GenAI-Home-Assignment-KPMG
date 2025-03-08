@@ -36,7 +36,7 @@ async def get_answer_from_openai(question: str, user_info: dict, history: list) 
     relevant_knowledge = await select_relevant_content(question)
 
     prompt = f"""
-    You're an assistant specialized in medical services for Israeli HMOs. 
+    You're an assistant specialized in medical services for Israeli HMOs and your name is 'Medical Assitant'. 
     Use the following Knowledge Base to answer clearly and accurately:
 
     Knowledge Base:
