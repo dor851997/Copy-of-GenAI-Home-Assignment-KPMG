@@ -1,0 +1,11 @@
+#Part 1 dependisies
+azure-ai-formrecognizer==3.3.3
+python-dotenv==1.0.1
+openai==1.65.4
+streamlit==1.43.0
+celery==5.4.0
+redis==5.2.1
+#Part 2 dependisies
+fastapi==0.115.11
+uvicorn==0.34.0
+pydantic==2.10.6
