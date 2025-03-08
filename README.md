@@ -1,11 +1,47 @@
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/ed5b23ba-3e7e-46fd-a18c-8fcc520bee52" alt="kpmg-logo-1" width="200" />
-</p>
-
 <h1 align="center">GenAI Developer Assessment Assignment</h1>
 
+## Cloning the Repository:
+```bash
+git clone https://github.com/dor851997/Copy-of-GenAI-Home-Assignment-KPMG.git
+cd Copy-of-GenAI-Home-Assignment-KPMG
+```
 
-You are given 4 days to complete this assessment. For this assignment, you have access to the following Azure OpenAI resources:
+## Virtual Environment Setup:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+## Environment Variables:
+Create a .env file at the root of the project directory (Copy-of-GenAI-Home-Assignment-KPMG) and add your Azure credentials:
+```bash
+AZURE_OPENAI_SERVICES_KEY=your-openai-api-key
+AZURE_OPENAI_SERVICES_URL=your_openai_endpoint
+AZURE_OCR_AI_SERVICES_URL=your_azure_ocr_endpoint
+AZURE_OCR_AI_SERVICES_KEY=your_azure_ocr_api_key
+```
+
+## Running the Project:
+- **Phase 1** (Field Extraction Application):
+```bash
+cd phase1
+./run_app.sh
+```
+
+- **Phase 2 (Microservice-based Chatbot)**:
+```bash
+cd phase2
+./run_app.sh
+```
+
+## Running Tests:
+```bash
+pytest tests/
+```
+---
+
+For this assignment, you have access to the following Azure OpenAI resources:
 
 - Document Intelligence for Optical Character Recognition (OCR)
 - GPT-4o and GPT-4o Mini as Large Language Models (LLMs)
@@ -197,23 +233,3 @@ Collect the following user information:
 
 #### State Management
 - Pass all necessary user information and conversation history with each request to maintain statelessness.
-
-### Evaluation Criteria
-
-1. Microservice Architecture Implementation
-2. Technical Proficiency (Azure OpenAI usage, data processing)
-3. Prompt Engineering and LLM Utilization
-4. Code Quality and Organization
-5. User Experience
-6. Performance and Scalability
-7. Documentation
-8. Innovation
-9. Logging and Monitoring Implementation
-
-### Submission Guidelines
-1. Provide source code via **Your own GitHub repository DO NOT MAKE ANY CHANGES TO THIS REPO**.
-2. Include setup and run instructions.
-
-**Good luck! For any questions, feel free to contact me.**
-
-Dor Getter.
