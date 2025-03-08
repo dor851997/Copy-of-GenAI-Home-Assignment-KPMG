@@ -35,3 +35,4 @@ def test_chat_endpoint(client):
 
     assert response.status_code == 200
     assert "response" in response.json()
+
